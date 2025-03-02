@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>可爱文字转图片工具</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Ma+Shan+Zheng&family=Noto+Sans+SC:wght@300;400;500;700&family=Noto+Serif+SC:wght@300;400;500;700&family=ZCOOL+KuaiLe&family=ZCOOL+QingKe+HuangYou&family=ZCOOL+XiaoWei&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- 装饰元素 -->
+    <div class="decoration heart1">
+        <i class="fas fa-heart" style="color: #ffd1e0; font-size: 30px;"></i>
+    </div>
+    <div class="decoration heart2">
+        <i class="fas fa-heart" style="color: #ff8eb4; font-size: 25px;"></i>
+    </div>
+    <div class="decoration heart3">
+        <i class="fas fa-heart" style="color: #ff6b9d; font-size: 35px;"></i>
+    </div>
+    <div class="decoration heart4">
+        <i class="fas fa-heart" style="color: #ffd1e0; font-size: 28px;"></i>
+    </div>
+    
+    <div class="container">
+        <header>
+            <h1>✨ 可爱文字转图片工具 ✨</h1>
+            <p style="color: #ff8eb4;">将你的文字变成精美图片，一键保存分享</p>
+        </header>
+        
+        <main>
+            <section class="input-section">
+                <h2>💖 输入文字</h2>
+                <textarea id="textInput" placeholder="请在此输入你想要转换的文字内容..."></textarea>
+                <div class="file-upload">
+                    <label for="fileInput" class="file-label">
+                        <i class="fas fa-file-upload" style="margin-right: 5px;"></i> 上传文本文件
+                    </label>
+                    <input type="file" id="fileInput" accept=".txt">
+                </div>
+            </section>
+            
+            <section class="settings-section">
+                <h2>🎨 图片设置</h2>
+                <div class="setting-item">
+                    <label for="bgColor">背景颜色:</label>
+                    <input type="color" id="bgColor" value="#FFFEF5">
+                </div>
+                <div class="setting-item">
+                    <label for="textColor">文字颜色:</label>
+                    <input type="color" id="textColor" value="#333333">
+                </div>
+                <div class="setting-item">
+                    <label for="fontSize">字体大小:</label>
+                    <input type="range" id="fontSize" min="8" max="24" value="14">
+                    <span id="fontSizeValue">14px</span>
+                </div>
+                <div class="setting-item">
+                    <label for="fontFamily">字体选择:</label>
+                    <select id="fontFamily">
+                        <option value="'PingFang SC', 'Helvetica Neue', Arial, sans-serif">苹方 (默认)</option>
+                        <option value="'Noto Sans SC', sans-serif">思源黑体</option>
+                        <option value="'Noto Serif SC', serif">思源宋体</option>
+                        <option value="'Ma Shan Zheng', cursive">马善政手写体</option>
+                        <option value="'ZCOOL KuaiLe', cursive">站酷快乐体</option>
+                        <option value="'ZCOOL QingKe HuangYou', cursive">站酷庆科黄油体</option>
+                        <option value="'ZCOOL XiaoWei', serif">站酷小薇体</option>
+                    </select>
+                </div>
+                <div class="setting-item">
+                    <label for="fontWeight">字体粗细:</label>
+                    <select id="fontWeight">
+                        <option value="300">细体</option>
+                        <option value="400" selected>常规</option>
+                        <option value="500">中粗</option>
+                        <option value="700">粗体</option>
+                    </select>
+                </div>
+            </section>
+            
+            <section class="action-section">
+                <button id="generateBtn" class="primary-btn">
+                    <i class="fas fa-magic" style="margin-right: 5px;"></i> 生成图片
+                </button>
+            </section>
+            
+            <section class="preview-section" id="previewSection">
+                <h2>🖼️ 图片预览</h2>
+                <div class="preview-container" id="previewContainer">
+                    <!-- 图片预览将在这里显示 -->
+                </div>
+                <div class="preview-actions">
+                    <button id="saveAllBtn" class="secondary-btn" disabled>
+                        <i class="fas fa-download" style="margin-right: 5px;"></i> 保存全部
+                    </button>
+                </div>
+            </section>
+        </main>
+        
+        <footer>
+            <p>💕 用爱制作 | 可爱文字转图片工具 💕</p>
+        </footer>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html> 
